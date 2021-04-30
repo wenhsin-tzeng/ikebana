@@ -1,0 +1,71 @@
+@import url('http://fonts.cdnfonts.com/css/kenoky');
+
+body {
+  font-family: 'KENOKY', sans-serif;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-top: 300px;
+  background-image: url("whitebg.jpg");
+  background-size: cover;
+  z-index: 999;
+}
+
+.subtitle {
+  font-size: 50px;
+  font-family: serif;
+  letter-spacing: 290px;
+  padding-left: 286px;
+  color: #121212;
+  margin-top: 10px;
+}
+
+.cropped {
+  width: 568px;
+  height: 667px;
+  object-fit: cover;
+  object-position: 0% 30%;
+  margin-top: -490px;
+  filter: blur(2px);
+}
+
+.click {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: 300px;
+    background-image: url("whitebg.jpg");
+    background-size: cover;
+  }
+  .text-image {
+    width: 290px;
+  }
+  .subtitle {
+    font-size: 25px;
+    font-family: serif;
+    letter-spacing: 70px;
+    color: #121212;
+    margin-top: 0px;
+    padding-left: 30px;
+    margin-left: 20px;
+  }
+  .cropped {
+    width: 378px;
+    height: 812px;
+    object-fit: cover;
+    object-position: 60% 30%;
+    margin-top: -490px;
+    filter: blur(10px);
+    margin-left: -9px;
+  }
+  .click {
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}

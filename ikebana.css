@@ -1,0 +1,39 @@
+@import url('http://fonts.cdnfonts.com/css/kenoky');
+
+@media only screen and (max-width: 400px) {
+
+  body {
+    font-family: 'KENOKY', sans-serif;
+    text-align: center;
+    position: relative;
+    background-image: url('Ikabana.jpeg');
+    background-position: 43% 5%;
+    background-size: 160%;
+    background-repeat: no-repeat;
+  }
+  .ikebana {
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+  .ikebana:hover {
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+  .ikebana:visited {
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: black;
+  }
+  .hua {
+    position: absolute;
+    font-size: 40px;
+    right: 20px;
+    top: 590px;
+    font-family: serif;
+  }
+  .pink{
+    width: 70px;
+    height: 70px;
+    margin-top: 220px;
+  }
+}
