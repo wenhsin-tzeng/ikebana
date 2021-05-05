@@ -3,7 +3,7 @@ body{
   background-color: white;
 }
 
-.container-right {
+.container-left {
   position: relative;
   background-image: url("whitebg.jpg");
   background-size: cover;
@@ -141,7 +141,7 @@ button.flow:hover{
   width: 50px;
 }
 
-.container-left{
+.container-right{
   position: absolute;
   bottom: 0px;
   right: 0px;

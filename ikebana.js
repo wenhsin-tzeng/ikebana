@@ -32,7 +32,7 @@ flower4.addEventListener('click', function(){
 })
 
 document.getElementById('button').addEventListener('click', function() {
-        html2canvas(document.querySelector('.container-left'), {
+        html2canvas(document.querySelector('.container-right'), {
             onrendered: function(canvas) {
                 // document.body.appendChild(canvas);
               return Canvas2Image.saveAsPNG(canvas);
