@@ -6,21 +6,6 @@
     <link rel="stylesheet" href="ikebana.css">
     <title>IKEBANA</title>
   </head>
-  <script type="text/javascript" src="jquery.js"></script>
-  <script type="text/javascript" src="html2canvas.js"></script>
-  <script>
-    function take_screenshot(){
-      html2canvas(document.body, {
-        onrendered: function(canvas)
-        {
-          var img = canvas.toDataURL()
-          $.post("save_screenshot.php", {data: img}, function (file){
-            window.location.href =  "save_screenshot.php?file="+ file
-          });
-        }
-      });
-    }
-</script>
   <body>
     <div class="container-right">
       <a href="index.html" class="ikebana">IKEBANA</a>
@@ -49,9 +34,9 @@
         <li><input type="checkbox" id="f20" onclick="myFunction(f1)"><img class="pink" src="fl20.png"></li>
       </div>
 
+      <button id="button" type="button" class="btn btn-default">Take a Screenshot!</button>
+      <!-- <button id="button" class="screen">Take Screenshot</button> -->
 
-      <button id="button" class="screen">Take Screenshot</button>
-      
     </div>
 
     <div id="photo" class="container-left">
@@ -59,23 +44,12 @@
       <img src="fl2.png" id="right-flower2" alt="fl2">
       <img src="fl3.png" id="right-flower3" alt="fl3">
       <img src="fl4.png" id="right-flower4" alt="fl4">
-      <!-- <button type="button" class="button">Take a Screenshot!</button> -->
       <p class="to">To: <input type="text" class="tbox" name="text"</p>
     </div>
 
     <script src="ikebana.js" charset="utf-8"></script>
 
   </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
-  <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $('#button').click(function(){
-        domtoimage.toBlob(document.getElementById('photo')).then(function(blob){
-          window.saveAs(blob, "output.jpg")
-        })
-      })
-    })
-  </script>
+  <script src="canvas2image.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 </html>

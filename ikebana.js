@@ -30,3 +30,12 @@ flower4.addEventListener('click', function(){
   fl4.style.display = "block";
   flower4.style.backgroundColor = "pink";
 })
+
+document.getElementById('button').addEventListener('click', function() {
+        html2canvas(document.querySelector('.container-left'), {
+            onrendered: function(canvas) {
+                // document.body.appendChild(canvas);
+              return Canvas2Image.saveAsPNG(canvas);
+            }
+        });
+    });
