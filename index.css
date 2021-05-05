@@ -26,11 +26,29 @@ body {
   object-position: 0% 30%;
   margin-top: -490px;
   filter: blur(2px);
+  animation-name: appear;
+  animation-duration: 5s;
+  animation-timing-function: 1;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0%
+  }
+  100% {
+    opacity: 100%
+  }
 }
 
 .click {
   text-transform: capitalize;
   letter-spacing: 1px;
+}
+
+.text-image {
+  animation-name: appear;
+  animation-duration: 5s;
+  animation-timing-function: 1;
 }
 
 @media only screen and (max-width: 400px) {

@@ -1,4 +1,189 @@
 @import url('http://fonts.cdnfonts.com/css/kenoky');
+body{
+  background-color: white;
+}
+
+.container-right {
+  position: relative;
+  background-image: url("whitebg.jpg");
+  background-size: cover;
+  height: 780px;
+  width: 720px;
+  right: 0px;
+  margin-top: -10px;
+}
+
+a.ikebana {
+  font-family: 'KENOKY', sans-serif;
+  position: relative;
+  left: 190px;
+  top: 80px;
+  font-size: 80px;
+  color: #121212;
+  text-decoration: none;
+  letter-spacing: 0px;
+}
+
+a.ikebana:link {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+a.ikebana:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a.ikebana:hover {
+  color: black;
+  text-decoration: none;
+}
+
+a.ikebana:active {
+  color: black;
+  text-decoration: none;
+}
+
+.subtitle {
+  position: relative;
+  text-align: center;
+  top: 45px;
+  left: 43px;
+  font-size: 27px;
+  letter-spacing: 115px;
+}
+
+.hua {
+  color: white;
+}
+
+.flower-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  padding: 20px;
+  margin-top: -10px;
+  row-gap: 15px;
+  list-style-type: none;
+}
+
+input {
+
+  margin-top: 75px;
+  margin-left: 30px;
+  transform: scale(1.3);
+}
+
+.tbox{
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-family: 'KENOKY', sans-serif;
+  color: black;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-style: italic;
+
+}
+
+p.to {
+  color: black;
+  font-family: 'KENOKY', sans-serif;
+  position: relative;
+  top: 600px;
+  font-size: 20px;
+  left: 60px;
+  letter-spacing: 2px;
+  font-style: italic;
+}
+
+li {
+  display: list-item;
+  width: 100px;
+}
+
+button.screen {
+  width: 150px;
+  border: 1.5px solid;
+  /* border-radius: 45%; */
+  background-color: transparent;
+  font-family: 'KENOKY', sans-serif;
+  font-size: 15px;
+  padding: 5px 10px 5px 10px;
+  margin-top: 20px;
+  margin-left: 270px;
+  letter-spacing: 1px;
+}
+
+button:hover{
+  background-color: pink;
+
+}
+
+button.flow {
+  width: 90px;
+  height: 90px;
+  background-image: url("fl4.png");
+  background-size: cover;
+  background-color: transparent;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-top: 0px;
+  border: 2px dotted grey;
+}
+
+button.flow:hover{
+  background-color: pink;
+
+}
+
+.pink {
+  width: 50px;
+}
+
+.container-left{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 780px;
+  width: 720px;
+  background-image: url("Ikabana.jpeg");
+  background-size: cover;
+  background-position: 20px 50%;
+}
+
+#right-flower1 {
+  width: 80px;
+  position: absolute;
+  top: 450px;
+  left: 250px;
+  display: none;
+}
+
+#right-flower2 {
+  width: 80px;
+  position: absolute;
+  top: 250px;
+  left: 350px;
+  display: none;
+}
+
+#right-flower3 {
+  width: 80px;
+  position: absolute;
+  top: 520px;
+  left: 350px;
+  display: none;
+}
+
+#right-flower4 {
+  width: 150px;
+  position: absolute;
+  top: 400px;
+  left: 280px;
+  display: none;
+}
+
 
 @media only screen and (max-width: 400px) {
 

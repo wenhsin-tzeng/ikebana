@@ -6,11 +6,76 @@
     <link rel="stylesheet" href="ikebana.css">
     <title>IKEBANA</title>
   </head>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="html2canvas.js"></script>
+  <script>
+    function take_screenshot(){
+      html2canvas(document.body, {
+        onrendered: function(canvas)
+        {
+          var img = canvas.toDataURL()
+          $.post("save_screenshot.php", {data: img}, function (file){
+            window.location.href =  "save_screenshot.php?file="+ file
+          });
+        }
+      });
+    }
+</script>
   <body>
-    <a href="index.html"><p class="ikebana">IKEBANA</p></a>
-    <p class="hua">花</p>
+    <div class="container-right">
+      <a href="index.html" class="ikebana">IKEBANA</a>
+      <p class="subtitle">生け花</p>
+      <p class="hua">花</p>
+      <div class="flower-grid">
+        <li><input type="checkbox" id="f1" onclick="myFunction(f1)"><img class="pink" src="fl1.png"></li>
+        <li><input type="checkbox" id="f2" onclick="myFunction(f1)"><img class="pink" src="fl2.png"></li>
+        <li><input type="checkbox" id="f3" onclick="myFunction(f1)"><img class="pink" src="fl3.png" ></li>
+        <li><button type="button" id="fl4" name="button" class="flow"></button></li>
+        <li><input type="checkbox" id="f5" onclick="myFunction(f1)"><img class="pink" src="fl5.png" ></li>
+        <li><input type="checkbox" id="f6" onclick="myFunction(f1)"><img class="pink" src="fl6.png" ></li>
+        <li><input type="checkbox" id="f7" onclick="myFunction(f1)"><img class="pink" src="fl7.png" ></li>
+        <li><input type="checkbox" id="f8" onclick="myFunction(f1)"><img class="pink" src="fl8.png" ></li>
+        <li><input type="checkbox" id="f9" onclick="myFunction(f1)"><img class="pink" src="fl9.png" ></li>
+        <li><input type="checkbox" id="f10" onclick="myFunction(f1)"><img class="pink" src="fl10.png" ></li>
+        <li><input type="checkbox" id="f11" onclick="myFunction(f1)"><img class="pink" src="fl11.png" ></li>
+        <li><input type="checkbox" id="f12" onclick="myFunction(f1)"><img class="pink" src="fl12.png"></li>
+        <li><input type="checkbox" id="f13" onclick="myFunction(f1)"><img class="pink" src="fl13.png"></li>
+        <li><input type="checkbox" id="f14" onclick="myFunction(f1)"><img class="pink" src="fl14.png" ></li>
+        <li><input type="checkbox" id="f15" onclick="myFunction(f1)"><img class="pink" src="fl15.png" ></li>
+        <li><input type="checkbox" id="f16" onclick="myFunction(f1)"><img class="pink" src="fl16.png"></li>
+        <li><input type="checkbox" id="f17" onclick="myFunction(f1)"><img class="pink" src="fl17.png" ></li>
+        <li><input type="checkbox" id="f18" onclick="myFunction(f1)"><img class="pink" src="fl18.png" ></li>
+        <li><input type="checkbox" id="f19" onclick="myFunction(f1)"><img class="pink" src="fl19.png" ></li>
+        <li><input type="checkbox" id="f20" onclick="myFunction(f1)"><img class="pink" src="fl20.png"></li>
+      </div>
 
-    <img class="pink" src="pink.png" alt="Pink carnation">
+
+      <button id="button" class="screen">Take Screenshot</button>
+      
+    </div>
+
+    <div id="photo" class="container-left">
+      <img src="fl1.png" id="right-flower1" alt="fl1">
+      <img src="fl2.png" id="right-flower2" alt="fl2">
+      <img src="fl3.png" id="right-flower3" alt="fl3">
+      <img src="fl4.png" id="right-flower4" alt="fl4">
+      <!-- <button type="button" class="button">Take a Screenshot!</button> -->
+      <p class="to">To: <input type="text" class="tbox" name="text"</p>
+    </div>
+
+    <script src="ikebana.js" charset="utf-8"></script>
 
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#button').click(function(){
+        domtoimage.toBlob(document.getElementById('photo')).then(function(blob){
+          window.saveAs(blob, "output.jpg")
+        })
+      })
+    })
+  </script>
 </html>
