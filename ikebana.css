@@ -189,6 +189,23 @@ button.screen3:hover{
   top: -200px;
 } */
 
+.buttonback{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid black;
+  font-size: 28px;
+  text-align: center;
+  font-family: 'KENOKY', sans-serif;
+}
+
+.buttonback:hover {
+  background-color: white;
+}
+
 .bigger {
   width: 53px;
   animation-name: rotate;

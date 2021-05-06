@@ -1,0 +1,84 @@
+@import url('http://fonts.cdnfonts.com/css/kenoky');
+
+body {
+  font-family: 'KENOKY', sans-serif;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-top: 80px;
+  background-image: url("whitebg.jpg");
+  background-size: cover;
+  z-index: 999;
+}
+
+.subtitle {
+  font-size: 33px;
+  font-family: serif;
+  letter-spacing: 150px;
+  padding-left: 146px;
+  color: #121212;
+  margin-top: 10px;
+  animation-name: appear;
+  animation-duration: 5s;
+  animation-timing-function: 1;
+}
+
+iframe {
+  margin-top: 25px;
+}
+
+.cropped {
+  width: 568px;
+  height: 717px;
+  object-fit: cover;
+  object-position: 0% 20%;
+  margin-top: -490px;
+  filter: blur(2px);
+  animation-name: appear;
+  animation-duration: 5s;
+  animation-timing-function: 1;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0%
+  }
+  100% {
+    opacity: 100%
+  }
+}
+
+.text-image {
+  animation-name: appear;
+  animation-duration: 5s;
+  animation-timing-function: 1;
+  width: 400px;
+}
+
+.bodytext{
+  width: 700px;
+  text-align: left;
+  margin: auto;
+  letter-spacing: 0px;
+  font-family: serif;
+  margin-top: 50px;
+  line-height: 22px;
+  animation-name: appear;
+  animation-duration: 5s;
+  animation-timing-function: 1;
+}
+
+.buttonback{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid black;
+  font-size: 28px;
+  text-align: center;
+}
+
+.buttonback:hover {
+  background-color: white;
+}
