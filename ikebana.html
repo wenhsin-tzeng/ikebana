@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="ikebana.css">
     <title>IKEBANA</title>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
   </head>
   <body>
     <div class="container-left">
@@ -14,27 +15,29 @@
       <div class="flower-grid">
         <li><input type="checkbox" id="f1" onclick="myFunction(f1)"><img class="pink" src="fl1.png"></li>
         <li><input type="checkbox" id="f2" onclick="myFunction(f1)"><img class="pink" src="fl2.png"></li>
-        <li><input type="checkbox" id="f3" onclick="myFunction(f1)"><img class="pink" src="fl3.png" ></li>
-        <li><button type="button" id="fl4" name="button" class="flow"></button></li>
-        <li><input type="checkbox" id="f5" onclick="myFunction(f1)"><img class="pink" src="fl5.png" ></li>
-        <li><input type="checkbox" id="f6" onclick="myFunction(f1)"><img class="pink" src="fl6.png" ></li>
-        <li><input type="checkbox" id="f7" onclick="myFunction(f1)"><img class="pink" src="fl7.png" ></li>
-        <li><input type="checkbox" id="f8" onclick="myFunction(f1)"><img class="pink" src="fl8.png" ></li>
-        <li><input type="checkbox" id="f9" onclick="myFunction(f1)"><img class="pink" src="fl9.png" ></li>
-        <li><input type="checkbox" id="f10" onclick="myFunction(f1)"><img class="pink" src="fl10.png" ></li>
-        <li><input type="checkbox" id="f11" onclick="myFunction(f1)"><img class="pink" src="fl11.png" ></li>
+        <li><input type="checkbox" id="f3" onclick="myFunction(f1)"><img class="pink" src="fl3.png"></li>
+        <li><input type="checkbox" id="f4" onclick="myFunction(f1)"><img class="bigger" src="fl4.png"></li>
+        <li><input type="checkbox" id="f5" onclick="myFunction(f1)"><img class="pink" src="fl5.png"></li>
+        <li><input type="checkbox" id="f6" onclick="myFunction(f1)"><img class="pink" src="fl6.png"></li>
+        <li><input type="checkbox" id="f7" onclick="myFunction(f1)"><img class="pink" src="fl7.png"></li>
+        <li><input type="checkbox" id="f8" onclick="myFunction(f1)"><img class="pink" src="fl8.png"></li>
+        <li><input type="checkbox" id="f9" onclick="myFunction(f1)"><img class="pink" src="fl9.png"></li>
+        <li><input type="checkbox" id="f10" onclick="myFunction(f1)"><img class="pink" src="fl10.png"></li>
+        <li><input type="checkbox" id="f11" onclick="myFunction(f1)"><img class="pink" src="fl11.png"></li>
         <li><input type="checkbox" id="f12" onclick="myFunction(f1)"><img class="pink" src="fl12.png"></li>
         <li><input type="checkbox" id="f13" onclick="myFunction(f1)"><img class="pink" src="fl13.png"></li>
-        <li><input type="checkbox" id="f14" onclick="myFunction(f1)"><img class="pink" src="fl14.png" ></li>
-        <li><input type="checkbox" id="f15" onclick="myFunction(f1)"><img class="pink" src="fl15.png" ></li>
+        <li><input type="checkbox" id="f14" onclick="myFunction(f1)"><img class="pink" src="fl14.png"></li>
+        <li><input type="checkbox" id="f15" onclick="myFunction(f1)"><img class="pink" src="fl15.png"></li>
         <li><input type="checkbox" id="f16" onclick="myFunction(f1)"><img class="pink" src="fl16.png"></li>
-        <li><input type="checkbox" id="f17" onclick="myFunction(f1)"><img class="pink" src="fl17.png" ></li>
-        <li><input type="checkbox" id="f18" onclick="myFunction(f1)"><img class="pink" src="fl18.png" ></li>
-        <li><input type="checkbox" id="f19" onclick="myFunction(f1)"><img class="pink" src="fl19.png" ></li>
+        <li><input type="checkbox" id="f17" onclick="myFunction(f1)"><img class="pink" src="fl17.png"></li>
+        <li><input type="checkbox" id="f18" onclick="myFunction(f1)"><img class="smaller" src="fl18.png"></li>
+        <li><input type="checkbox" id="f19" onclick="myFunction(f1)"><img class="pink" src="fl19.png"></li>
         <li><input type="checkbox" id="f20" onclick="myFunction(f1)"><img class="pink" src="fl20.png"></li>
       </div>
 
-      <button id="button" class="screen">Take Screenshot</button>
+      <button class="screen2" onclick="randombg()">Change Background</button>
+      <button id="showtextbox" class="screen3" onclick="showmsg()" onmouseover="showcircle()" onmouseout="removecircle()">Fill Out Names</button>
+      <button id="button" class="screen" onclick="takeshot()">Create Card Image</button>
 
     </div>
 
@@ -43,12 +46,29 @@
       <img src="fl2.png" id="right-flower2" alt="fl2">
       <img src="fl3.png" id="right-flower3" alt="fl3">
       <img src="fl4.png" id="right-flower4" alt="fl4">
-      <p class="to">To: <input type="text" class="tbox" name="text"</p>
+      <img src="fl5.png" id="right-flower5" alt="fl5">
+      <img src="fl6.png" id="right-flower6" alt="fl6">
+      <img src="fl7.png" id="right-flower7" alt="fl7">
+      <img src="fl8.png" id="right-flower8" alt="fl8">
+      <img src="fl9.png" id="right-flower9" alt="fl9">
+      <img src="fl10.png" id="right-flower10" alt="fl10">
+      <img src="fl11.png" id="right-flower11" alt="fl11">
+      <img src="fl12.png" id="right-flower12" alt="fl12">
+      <img src="fl13.png" id="right-flower13" alt="fl13">
+      <img src="fl14.png" id="right-flower14" alt="fl14">
+      <img src="fl15.png" id="right-flower15" alt="fl15">
+      <img src="fl16.png" id="right-flower16" alt="fl16">
+      <img src="fl17.png" id="right-flower17" alt="fl17">
+      <img src="fl18.png" id="right-flower18" alt="fl18">
+      <img src="fl19.png" id="right-flower19" alt="fl19">
+      <img src="fl20.png" id="right-flower20" alt="fl20">
+      <div id="circle" class="circle"></div>
+      <p class="to">To: <input type="text" class="tbox" name="text"></p>
+      <p class="from">From: <input type="text" class="tbox" name="text"></p>
+      <p class="word">@IKEBANA.com</p>
+
     </div>
 
     <script src="ikebana.js" charset="utf-8"></script>
-
   </body>
-  <script src="https://superal.github.io/canvas2image/canvas2image.js" charset="utf-8"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 </html>

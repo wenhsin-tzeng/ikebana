@@ -1,4 +1,7 @@
 @import url('http://fonts.cdnfonts.com/css/kenoky');
+html {
+  height: 100vh;
+}
 body{
   background-color: white;
 }
@@ -7,7 +10,7 @@ body{
   position: relative;
   background-image: url("whitebg.jpg");
   background-size: cover;
-  height: 780px;
+  height: 820px;
   width: 720px;
   right: 0px;
   margin-top: -10px;
@@ -67,7 +70,7 @@ a.ikebana:active {
   list-style-type: none;
 }
 
-input {
+input[type=checkbox] {
 
   margin-top: 75px;
   margin-left: 30px;
@@ -80,21 +83,39 @@ input {
   outline: none;
   font-family: 'KENOKY', sans-serif;
   color: black;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 2px;
   font-style: italic;
-
 }
 
 p.to {
   color: black;
   font-family: 'KENOKY', sans-serif;
   position: relative;
-  top: 600px;
-  font-size: 20px;
+  top: 680px;
+  font-size: 18px;
   left: 60px;
   letter-spacing: 2px;
   font-style: italic;
+}
+
+p.from {
+  color: black;
+  font-family: 'KENOKY', sans-serif;
+  position: relative;
+  top: 670px;
+  font-size: 18px;
+  left: 60px;
+  letter-spacing: 2px;
+  font-style: italic;
+}
+
+.word {
+  font-family: 'KENOKY', sans-serif;
+  position: absolute;
+  margin-top: -35px;
+  right: -35px;
+  transform: rotate(90deg);
 }
 
 li {
@@ -102,54 +123,136 @@ li {
   width: 100px;
 }
 
-button.screen {
-  width: 150px;
+/* button.screen {
+  width: 160px;
   border: 1.5px solid;
-  /* border-radius: 45%; */
   background-color: transparent;
   font-family: 'KENOKY', sans-serif;
   font-size: 15px;
   padding: 5px 10px 5px 10px;
-  margin-top: 20px;
-  margin-left: 270px;
+  margin-top: 50px;
+  margin-left: 250px;
+  letter-spacing: 1px;
+} */
+
+.screen2 {
+  position: relative;
+  border: 1.5px solid;
+  background-color: transparent;
+  font-family: 'KENOKY', sans-serif;
+  font-size: 15px;
+  padding: 5px 10px 5px 10px;
+  margin-top: 50px;
+  margin-left: 105px;
   letter-spacing: 1px;
 }
 
-button:hover{
+button.screen2:hover{
   background-color: pink;
-
 }
 
-button.flow {
-  width: 90px;
-  height: 90px;
-  background-image: url("fl4.png");
-  background-size: cover;
+.screen {
+  position: relative;
+  border: 1.5px solid;
   background-color: transparent;
-  border-radius: 50%;
-  margin-left: 20px;
+  font-family: 'KENOKY', sans-serif;
+  font-size: 15px;
+  padding: 5px 10px 5px 10px;
   margin-top: 0px;
-  border: 2px dotted grey;
+  margin-left: 20px;
+  letter-spacing: 1px;
 }
 
-button.flow:hover{
-  background-color: pink;
+button.screen:hover{
+  background-color: lightyellow;
+}
 
+.screen3 {
+  position: relative;
+  border: 1.5px solid;
+  background-color: transparent;
+  font-family: 'KENOKY', sans-serif;
+  font-size: 15px;
+  padding: 5px 10px 5px 10px;
+  margin-top: 0px;
+  margin-left: 20px;
+  letter-spacing: 1px;
+}
+
+button.screen3:hover{
+  background-color: lightsalmon;
+}
+
+.bigger {
+  width: 53px;
+  animation-name: rotate;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+  animation-delay: 2s;
+}
+
+.smaller {
+  width: 35px;
+  animation-name: rotate;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+  animation-delay: 2s;
 }
 
 .pink {
   width: 50px;
+  animation-name: rotate;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+  animation-delay: 2s;
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .container-right{
   position: absolute;
-  bottom: 0px;
+  top: 0px;
   right: 0px;
-  height: 780px;
+  height: 820px;
   width: 720px;
   background-image: url("Ikabana.jpeg");
   background-size: cover;
-  background-position: 20px 50%;
+  background-position: 30px 50%;
+}
+
+.circle {
+  position: absolute;
+  margin-top: 660px;
+  margin-left: 50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 5px dotted lightsalmon;
+  animation-name: rotatecircle;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  display: none;
+}
+
+@keyframes rotatecircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #right-flower1 {
@@ -183,6 +286,131 @@ button.flow:hover{
   left: 280px;
   display: none;
 }
+
+#right-flower5 {
+  width: 150px;
+  position: absolute;
+  top: 300px;
+  left: 230px;
+  display: none;
+}
+
+#right-flower6 {
+  width: 80px;
+  position: absolute;
+  top: 300px;
+  left: 260px;
+  display: none;
+}
+
+#right-flower7 {
+  width: 150px;
+  position: absolute;
+  top: 500px;
+  left: 230px;
+  display: none;
+}
+
+#right-flower8 {
+  width: 110px;
+  position: absolute;
+  top: 320px;
+  left: 290px;
+  display: none;
+}
+
+#right-flower9 {
+  width: 180px;
+  position: absolute;
+  top: 380px;
+  left: 320px;
+  transform: rotate(-20deg);
+  display: none;
+}
+
+#right-flower10 {
+  width: 120px;
+  position: absolute;
+  top: 300px;
+  left: 200px;
+  display: none;
+}
+
+#right-flower11 {
+  width: 120px;
+  position: absolute;
+  top: 590px;
+  left: 300px;
+  display: none;
+}
+#right-flower12 {
+  width: 70px;
+  position: absolute;
+  top: 565px;
+  left: 360px;
+  transform: rotate(20deg);
+  display: none;
+}
+#right-flower13 {
+  width: 50px;
+  position: absolute;
+  top: 400px;
+  left: 340px;
+  display: none;
+}
+#right-flower14 {
+  width: 100px;
+  position: absolute;
+  top: 480px;
+  left: 280px;
+  display: none;
+}
+#right-flower15 {
+  width: 60px;
+  position: absolute;
+  top: 500px;
+  left: 400px;
+  display: none;
+}
+
+#right-flower16 {
+  width: 70px;
+  position: absolute;
+  top: 230px;
+  left: 370px;
+  display: none;
+}
+#right-flower17 {
+  width: 120px;
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  display: none;
+}
+#right-flower18 {
+  width: 110px;
+  position: absolute;
+  top: 360px;
+  left: 265px;
+  transform: rotate(-20deg);
+  display: none;
+}
+#right-flower19 {
+  width: 60px;
+  position: absolute;
+  top: 470px;
+  left: 350px;
+  display: none;
+}
+#right-flower20 {
+  width: 110px;
+  position: absolute;
+  top: 300px;
+  left: 350px;
+  display: none;
+  transform: rotate(22deg);
+}
+
 
 
 @media only screen and (max-width: 400px) {

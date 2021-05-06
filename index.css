@@ -21,9 +21,9 @@ body {
 
 .cropped {
   width: 568px;
-  height: 667px;
+  height: 717px;
   object-fit: cover;
-  object-position: 0% 30%;
+  object-position: 0% 20%;
   margin-top: -490px;
   filter: blur(2px);
   animation-name: appear;
