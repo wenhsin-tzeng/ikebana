@@ -79,6 +79,23 @@ iframe {
   text-align: center;
 }
 
+.buttonback:link {
+  color:black;
+  text-decoration: none;
+}
+
+.buttonback:visited {
+  color:black;
+  text-decoration: none;
+}
+
 .buttonback:hover {
   background-color: white;
+  color:black;
+  text-decoration: none;
+}
+
+.buttonback:active {
+  color:black;
+  text-decoration: none;
 }
