@@ -165,7 +165,7 @@ function randombg(){
                 "url('bg6.jpg')",
                 "url('bg8.jpeg')",
                 "url('bg9.jpeg')",
-                "url('Ikabana.jpeg')"];
+                "url('bg1.jpeg')"];
   document.getElementById('photo').style.backgroundImage = bgpics[random];
   document.getElementById('photo').style.transition = "background-image 2s ease-in-out";
 }
@@ -176,7 +176,5 @@ function takeshot() {
     var myWindow = window.open ("", "", "width=750,height=850");
     myWindow.document.body.appendChild(canvas);
     myWindow.document.title = "Save Card To Your Computer!";
-    // document.getElementById('output').appendChild(canvas);
-
   })
 }
