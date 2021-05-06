@@ -183,6 +183,12 @@ button.screen3:hover{
   background-color: lightsalmon;
 }
 
+/* .audiobox {
+  position: relative;
+  background-color: transparent;
+  top: -200px;
+} */
+
 .bigger {
   width: 53px;
   animation-name: rotate;
